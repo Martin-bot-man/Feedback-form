@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input validation form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form id="registrationForm" action="/submit-form" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required minlength="3" maxlength="15">
+        <span id="usernameError"></span>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span id="emailError"></span>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+        <span id="passwordError"></span>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="99">
+        <span id="ageError"></span>
+        <input type="submit" value="Register" class="button">
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
